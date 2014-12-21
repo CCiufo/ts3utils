@@ -1,0 +1,6 @@
+#!/bin/bash
+
+source config.sh
+tail -fq $ts3_path/logs/ts3server_*.log >> $ts3path/logs/combined.log &
+
+echo $! > /opt/ts3/logs/combined.pid
